@@ -32,4 +32,45 @@ w
 class(z)
 class(w)
 
+# Create a vector of objects with the c() function: concatenate
+
+a <- c(1,3,5)
+b <- c("a", "b", "d")
+c <- c(TRUE,TRUE,FALSE,FALSE,TRUE)
+d <- 1:29
+
+# Print values
+a
+b
+c
+d
+
+# Use the vector function to create a type of vector with n elements
+
+v <- vector("numeric",4)
+v
+
+# Coercion: obects of a different type in defined in one vector result in one type of vector
+
+h <- c(1.5,"anderhalf")
+e <- c(FALSE, "Dit is goed")
+k <- c(T,3.14)
+
+h
+e
+k
+
+# Conversion of one type to another eg form numeric to character or numeric to logical
+
+as.character(a)
+as.numeric(h)
+as.logical(k)
+
+
+# List can contain elements with different types
+
+l1 <- list(1,F,"Fout", 1+2i)
+l1
+
+
 
