@@ -72,5 +72,33 @@ as.logical(k)
 l1 <- list(1,F,"Fout", 1+2i)
 l1
 
+# Creating a matrix with 2 rows and 3 columns
+
+m1 <- matrix(nrow=2, ncol=3)
+m1
+dim(m1)
+attributes(m1)
+
+
+# Create a factor vector
+
+fac <- factor(c("Male", "Female", "Unknown"),levels=c("Male","Female", "Unknown"))
+fac
+
+table(fac)
+
+# Create a data frame
+df <- data.frame(foo=1:4,bar=c(TRUE,TRUE,FALSE,TRUE))
+
+nrow(df)
+ncol(df)
+
+summary(df)
+
+occ_data <- read.csv("occupation-2018-census-csv.csv")
+summary(occ_data)
+
+
+
 
 
