@@ -97,6 +97,14 @@ summary(df)
 
 occ_data <- read.csv("occupation-2018-census-csv.csv")
 summary(occ_data)
+pop <- subset(occ_data, Occupation != "Total" & Occupation != "Total stated")
+pop
+
+n_pop <- pop$Employed_census_usually_resident_population_count_aged_15_years_and_over
+barplot(n_pop)
+
+
+
 
 
 
