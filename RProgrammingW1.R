@@ -103,6 +103,53 @@ pop
 n_pop <- pop$Employed_census_usually_resident_population_count_aged_15_years_and_over
 barplot(n_pop)
 
+x <- c(4, "a", TRUE)
+class(x)
+
+x <- c(1,3, 5)
+y <- c(3, 2, 10)
+cbind(x, y)
+
+x <- list(2, "a", "b", TRUE)
+x[[2]]
+
+x <- 1:4
+y <- 2
+x+y
+
+x <- c(3, 5, 1, 10, 12, 6)
+x[x<6]<-0
+x
+
+unzip("quiz1_data.zip")
+read.csv("hw1_data.csv")
+my_data <- read.csv("hw1_data.csv")
+str(my_data)
+
+
+my_data <- read.csv("hw1_data.csv",nrows=2)
+my_data
+
+my_data <- read.csv("hw1_data.csv")
+tail(my_data,2)
+
+my_data <- read.csv("hw1_data.csv")
+my_data[47,]
+
+oz <-my_data$Ozone
+oz
+bad <- is.na(oz)
+length(oz[bad])
+
+good <- oz[!bad]
+
+mean(good)
+
+
+
+
+
+
 
 
 
