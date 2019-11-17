@@ -145,6 +145,32 @@ good <- oz[!bad]
 
 mean(good)
 
+# Extract the subset of rows of the data frame where Ozone values are above 31 and Temp values are above 90.
+
+my_data <- read.csv("hw1_data.csv")
+
+my_filtered_data <- my_data[my_data$Ozone>31 & my_data$Temp >90,]
+my_complete_filtered_data <- my_filtered_data[complete.cases(my_filtered_data), ]
+solar_R <- my_complete_filtered_data$Solar.R
+mean_solar_R <- mean(solar_R)
+mean_solar_R
+
+my_filtered_data2 <- my_data[my_data$Month==6,]
+mean_temp_my_filtered_data2 <- mean(my_filtered_data2$Temp)
+mean_temp_my_filtered_data2
+
+data_for_may_ozone <- my_data[my_data$Month==5,"Ozone"]
+complete_data_for_may_ozone <- data_for_may_ozone[complete.cases(data_for_may_ozone)]
+complete_data_for_may_ozone
+
+max(complete_data_for_may_ozone)
+
+
+
+
+
+
+
 
 
 
